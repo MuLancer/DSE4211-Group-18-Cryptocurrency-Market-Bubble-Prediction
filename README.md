@@ -46,6 +46,20 @@ pip install -r requirements.txt
 
 ## 💻 Usage
 
+### Quick Demo (No Internet Required)
+
+Run the demo with synthetic data to see the system in action:
+
+```bash
+python demo.py
+```
+
+This demo:
+- Uses realistic synthetic data (no internet needed)
+- Demonstrates all features of the bubble detection system
+- Generates visualizations in the `demo_output/` directory
+- Perfect for understanding how the system works
+
 ### Basic Analysis
 
 Run a basic bubble detection analysis on Bitcoin:
@@ -153,6 +167,9 @@ DSE4211-Group-18-Cryptocurrency-Market-Bubble-Prediction/
 │   ├── basic_analysis.py        # Basic usage example
 │   └── multi_crypto_analysis.py # Multi-cryptocurrency analysis
 │
+├── demo.py                       # Interactive demo with synthetic data
+├── test_offline.py              # Unit tests (no internet required)
+├── test_system.py               # Integration tests (requires internet)
 ├── requirements.txt             # Python dependencies
 ├── .gitignore                   # Git ignore rules
 └── README.md                    # This file
