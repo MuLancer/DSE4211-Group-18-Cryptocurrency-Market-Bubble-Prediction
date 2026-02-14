@@ -5,8 +5,8 @@ Simple test script to verify the bubble detection system works correctly.
 import sys
 import os
 
-# Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+# Add current directory to path
+sys.path.insert(0, os.path.dirname(__file__))
 
 from src.data_fetcher import CryptoDataFetcher
 from src.bubble_detector import BubbleDetector

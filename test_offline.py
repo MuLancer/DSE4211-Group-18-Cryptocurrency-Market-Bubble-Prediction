@@ -5,8 +5,8 @@ Unit tests with synthetic data (no internet required)
 import sys
 import os
 
-# Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+# Add current directory to path
+sys.path.insert(0, os.path.dirname(__file__))
 
 import pandas as pd
 import numpy as np
