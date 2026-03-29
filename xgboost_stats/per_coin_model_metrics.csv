@@ -1,0 +1,25 @@
+Coin,Class,Precision,Recall,F1-Score
+ADA,Not Bubble,0.832,1.0,0.9083
+ADA,Bubble Creation,0.0,0.0,0.0
+ADA,Bubble Collapse,0.0,0.0,0.0
+ADA,-- MACRO AVG --,--,--,0.4541
+BNB,Not Bubble,0.7398,1.0,0.8504
+BNB,Bubble Creation,0.0,0.0,0.0
+BNB,Bubble Collapse,0.0,0.0,0.0
+BNB,-- MACRO AVG --,--,--,0.2835
+BTC,Not Bubble,0.6528,0.9934,0.7879
+BTC,Bubble Creation,0.931,0.1646,0.2798
+BTC,Bubble Collapse,0.0,0.0,0.0
+BTC,-- MACRO AVG --,--,--,0.3559
+DOGE,Not Bubble,0.847,0.9873,0.9118
+DOGE,Bubble Creation,0.9412,0.3678,0.5289
+DOGE,Bubble Collapse,0.0,0.0,0.0
+DOGE,-- MACRO AVG --,--,--,0.4802
+ETH,Not Bubble,0.8791,1.0,0.9357
+ETH,Bubble Creation,0.0,0.0,0.0
+ETH,Bubble Collapse,0.0,0.0,0.0
+ETH,-- MACRO AVG --,--,--,0.3119
+SOL,Not Bubble,1.0,0.2387,0.3855
+SOL,Bubble Creation,0.4255,0.9877,0.5948
+SOL,Bubble Collapse,0.2125,0.9444,0.3469
+SOL,-- MACRO AVG --,--,--,0.4424

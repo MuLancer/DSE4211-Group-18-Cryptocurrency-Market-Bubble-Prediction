@@ -1,13 +1,43 @@
 Model,Class,Precision,Recall,F1-Score
-XGBoost Baseline,Not Bubble,0.7467,0.994,0.8528
-XGBoost Baseline,Bubble Creation,0.9375,0.0223,0.0435
-XGBoost Baseline,Bubble Collapse,0.3333,0.075,0.1224
-XGBoost Baseline,-- MACRO AVG --,--,--,0.3396
-XGBoost Baseline,-- WEIGHTED AVG (F1) --,--,--,0.6465
-XGBoost Baseline,-- ROC-AUC (weighted) --,--,--,0.6245
-XGBoost Tuned,Not Bubble,0.7454,0.9954,0.8525
-XGBoost Tuned,Bubble Creation,1.0,0.0193,0.0378
-XGBoost Tuned,Bubble Collapse,0.1667,0.025,0.0435
-XGBoost Tuned,-- MACRO AVG --,--,--,0.3113
-XGBoost Tuned,-- WEIGHTED AVG (F1) --,--,--,0.6428
-XGBoost Tuned,-- ROC-AUC (weighted) --,--,--,0.7387
+Global XGBoost,Not Bubble,0.7451,0.9977,0.8531
+Global XGBoost,Bubble Creation,0.8182,0.0134,0.0263
+Global XGBoost,Bubble Collapse,0.5,0.0375,0.0698
+Global XGBoost,-- MACRO AVG --,--,--,0.3164
+Global XGBoost,-- WEIGHTED AVG (F1) --,--,--,0.6414
+Global XGBoost,-- ROC-AUC (weighted) --,--,--,0.656
+Per-Coin: ADA,Not Bubble,0.832,1.0,0.9083
+Per-Coin: ADA,Bubble Creation,0.0,0.0,0.0
+Per-Coin: ADA,Bubble Collapse,0.0,0.0,0.0
+Per-Coin: ADA,-- MACRO AVG --,--,--,0.4541
+Per-Coin: ADA,-- WEIGHTED AVG (F1) --,--,--,0.7557
+Per-Coin: ADA,-- ROC-AUC (weighted) --,--,--,0.897
+Per-Coin: BNB,Not Bubble,0.7398,1.0,0.8504
+Per-Coin: BNB,Bubble Creation,0.0,0.0,0.0
+Per-Coin: BNB,Bubble Collapse,0.0,0.0,0.0
+Per-Coin: BNB,-- MACRO AVG --,--,--,0.2835
+Per-Coin: BNB,-- WEIGHTED AVG (F1) --,--,--,0.6291
+Per-Coin: BNB,-- ROC-AUC (weighted) --,--,--,0.717
+Per-Coin: BTC,Not Bubble,0.6528,0.9934,0.7879
+Per-Coin: BTC,Bubble Creation,0.931,0.1646,0.2798
+Per-Coin: BTC,Bubble Collapse,0.0,0.0,0.0
+Per-Coin: BTC,-- MACRO AVG --,--,--,0.3559
+Per-Coin: BTC,-- WEIGHTED AVG (F1) --,--,--,0.58
+Per-Coin: BTC,-- ROC-AUC (weighted) --,--,--,0.9182
+Per-Coin: DOGE,Not Bubble,0.847,0.9873,0.9118
+Per-Coin: DOGE,Bubble Creation,0.9412,0.3678,0.5289
+Per-Coin: DOGE,Bubble Collapse,0.0,0.0,0.0
+Per-Coin: DOGE,-- MACRO AVG --,--,--,0.4802
+Per-Coin: DOGE,-- WEIGHTED AVG (F1) --,--,--,0.8266
+Per-Coin: DOGE,-- ROC-AUC (weighted) --,--,--,0.8917
+Per-Coin: ETH,Not Bubble,0.8791,1.0,0.9357
+Per-Coin: ETH,Bubble Creation,0.0,0.0,0.0
+Per-Coin: ETH,Bubble Collapse,0.0,0.0,0.0
+Per-Coin: ETH,-- MACRO AVG --,--,--,0.3119
+Per-Coin: ETH,-- WEIGHTED AVG (F1) --,--,--,0.8225
+Per-Coin: ETH,-- ROC-AUC (weighted) --,--,--,0.6149
+Per-Coin: SOL,Not Bubble,1.0,0.2387,0.3855
+Per-Coin: SOL,Bubble Creation,0.4255,0.9877,0.5948
+Per-Coin: SOL,Bubble Collapse,0.2125,0.9444,0.3469
+Per-Coin: SOL,-- MACRO AVG --,--,--,0.4424
+Per-Coin: SOL,-- WEIGHTED AVG (F1) --,--,--,0.4361
+Per-Coin: SOL,-- ROC-AUC (weighted) --,--,--,0.8605
