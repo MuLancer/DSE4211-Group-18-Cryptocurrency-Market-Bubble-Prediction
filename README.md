@@ -8,8 +8,10 @@
  
 - Bubble labelling
   1. Labelling: bubble_labelling.ipynb
-  2. Evaluation: bubbles_cooccurrence.ipynb
-  3. Co-occurrence plot: data/outputs/
+     - Combining labels with df_features: combined_features_labelling.ipynb
+     - Combining labels with integrated_data: combined_labelling.ipynb
+  3. Evaluation: bubbles_cooccurrence.ipynb
+  2. Co-occurrence plot: data/outputs/
      
 - PCA
   1. Model: pca_dimensionality_reduction.ipynb
