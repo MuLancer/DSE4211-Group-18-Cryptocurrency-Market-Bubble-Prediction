@@ -21,7 +21,8 @@
   3. Evaluation: data/outputs/
      
 - XGBoost model
-  1. Model: xgboost_fixed.ipynb
-  2. Evaluation: xgboost_stats_fixed folder
+  1. Model: xgboost.ipynb
+  2. Evaluation: xgboost_stats folder
+
 - LSTM model
   1. Model: lstm.ipynb
