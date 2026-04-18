@@ -28,3 +28,6 @@
 
 - LSTM model
   1. Model: lstm.ipynb
+
+## Replication
+- Install the relative dependecies using `
