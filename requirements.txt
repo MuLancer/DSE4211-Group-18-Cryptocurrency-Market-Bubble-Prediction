@@ -5,6 +5,7 @@ joblib==1.4.2
 matplotlib==3.8.4
 numpy==1.26.4
 pandas==2.2.2
+python-dateutil==2.9.0
 requests==2.31.0
 scikit-learn==1.4.2
 sympy==1.12
@@ -12,3 +13,5 @@ scipy==1.13.1
 seaborn==0.13.2
 torch==2.2.2
 xgboost==2.0.3
+fredapi==0.5.2
+pytrends==4.9.2
