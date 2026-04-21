@@ -25,6 +25,7 @@ class LassoModel:
         self.model = LogisticRegressionCV(
             penalty="l1",
             solver="saga",
+            multi_class="ovr", # fixes convergence issues with small datasets and many classes
             class_weight="balanced",
             cv=self.cv,
             max_iter=self.max_iter,
