@@ -56,10 +56,7 @@ class XGBoostModel:
         self.random_state = random_state
         self.model = None
 
-    def fit(self, X_train: np.ndarray, y_train: np.ndarray,
-            X_val: np.ndarray = None, y_val: np.ndarray = None, **kwargs):
-        # Remap labels to 0-indexed — XGBoost requires labels in [0, num_class)
-        # Some rolling windows lack certain classes (e.g. only [1,2] present).
+    def fit(self, X_train, y_train, X_val=None, y_val=None, **kwargs):
         self._orig_classes = np.unique(y_train)
         y_mapped = self._remap_labels(y_train)
 
@@ -68,28 +65,37 @@ class XGBoostModel:
 
         params = {**self.params, "num_class": len(self._orig_classes)}
         self.model = xgb.XGBClassifier(**params)
-
-        # Mirror xgboost.ipynb train_model(): carve 10% from training for
-        # early stopping so the test set is never seen during fitting.
-        try:
-            X_tr, X_es, y_tr, y_es = train_test_split(
-                X_train, y_mapped,
-                test_size=0.1,
-                stratify=y_mapped,
-                random_state=self.random_state,
-            )
-        except ValueError:
-            X_tr, X_es, y_tr, y_es = train_test_split(
-                X_train, y_mapped,
-                test_size=0.1,
-                random_state=self.random_state,
-            )
         self.model.set_params(early_stopping_rounds=self.early_stopping_rounds)
-        self.model.fit(
-            X_tr, y_tr,
-            eval_set=[(X_es, y_es)],
-            verbose=False,
-        )
+
+        if X_val is not None and y_val is not None:
+        # using the dedicated rolling-window validation split
+            y_val_mapped = np.array(
+                [np.where(self._orig_classes == c)[0][0]
+                if c in self._orig_classes else 0
+                for c in y_val], dtype=int
+            )
+            self.model.fit(
+                X_train, y_mapped,
+                eval_set=[(X_val, y_val_mapped)],
+                verbose=False,
+            )
+        else:
+        # Fallback: carve 10% from training internally
+            try:
+                X_tr, X_es, y_tr, y_es = train_test_split(
+                    X_train, y_mapped, test_size=0.1,
+                    stratify=y_mapped, random_state=self.random_state,
+                )
+            except ValueError:
+                X_tr, X_es, y_tr, y_es = train_test_split(
+                    X_train, y_mapped, test_size=0.1,
+                    random_state=self.random_state,
+                )
+            self.model.fit(
+                X_tr, y_tr,
+                eval_set=[(X_es, y_es)],
+                verbose=False,
+            )
         return self
 
     def _remap_labels(self, y: np.ndarray) -> np.ndarray:
