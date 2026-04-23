@@ -27,15 +27,13 @@
 | 1. Data collection | `data_collection.ipynb` |
 | 2. Data cleaning | `data_cleaning.ipynb` |
 | 3. Feature engineering | `feature_engineering.ipynb` |
-| 4. Data standardisation | `data_standardisation.ipynb` |
 
 ### Bubble Labelling
 | Step | Notebook |
 |------|----------|
 | 1. Labelling | `bubble_labelling.ipynb` |
-| 2. Merge labels with features | `combined_features_labelling.ipynb` |
-| 3. Merge labels with integrated data | `combined_labelling.ipynb` |
-| 4. Co-occurrence evaluation | `bubbles_cooccurrence.ipynb` |
+| 2. Merge labels with integrated data | `combined_raw_features_labelling.ipynb` |
+| 3. Co-occurrence evaluation | `bubbles_cooccurrence.ipynb` |
 
 ### Dimensionality Reduction
 | Step | Notebook |
