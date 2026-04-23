@@ -39,7 +39,8 @@ _PARAM_DISTRIBUTIONS = dict(
 
 
 class XGBoostModel:
-    """XGBoost multi-class gradient boosting wrapper for bubble prediction.
+    """
+    XGBoost multi-class gradient boosting wrapper for bubble prediction.
 
     Optionally tunes hyper-parameters with RandomizedSearchCV on the training
     fold (using the validation set as a hold-out for early stopping).
@@ -106,7 +107,9 @@ class XGBoostModel:
         return np.array([self._orig_classes[i] for i in y], dtype=int)
 
     def _tune(self, X: np.ndarray, y: np.ndarray):
-        """RandomizedSearchCV matching xgboost.ipynb hyperparameter_tuning()."""
+        """
+        RandomizedSearchCV matching xgboost.ipynb hyperparameter_tuning().
+        """
         base_params = {
             "objective": "multi:softmax",
             "num_class": len(self._orig_classes),
@@ -115,7 +118,7 @@ class XGBoostModel:
             "n_jobs": -1,
         }
         base = xgb.XGBClassifier(**base_params)
-        # shuffle=True + random_state matches the original notebook
+
         cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=self.random_state)
         search = RandomizedSearchCV(
             base, _PARAM_DISTRIBUTIONS,
